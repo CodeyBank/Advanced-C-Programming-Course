@@ -1,0 +1,6 @@
+#ifndef MYSTATICLIB_H_INCLUDED
+#define MYSTATICLIB_H_INCLUDED
+
+void func(void);
+
+#endif // MYSTATICLIB_H_INCLUDED

@@ -1,0 +1,6 @@
+Hello this is a test file
+The second line contains another dummy test
+Ihird DUMMY value
+Are you okay now
+I am stopping here !!!
+because I is in the Middle

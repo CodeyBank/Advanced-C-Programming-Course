@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1687515537 source:c:\users\stanley.ezeh\documents\advanced c programming\challenge4_52\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
