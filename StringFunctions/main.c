@@ -16,14 +16,14 @@
   ******************************************************************************
   */
 
-  #include <stdio.h>
-  #include <strings.h>
-  #include "StringFunctions.h"
+#include <stdio.h>
+#include <strings.h>
+#include "StringFunctions.h"
 
 
-int strcount(const char *str){
+int strcount(const char *str) {
     int count=0;
-    while(*(str++) != '\0'){
+    while(*(str++) != '\0') {
         count++;
     }
     return count;
@@ -41,71 +41,76 @@ int get_frequency(const char* restrict str, const char character, int LenOfStrin
     return frequency;
 }
 
-int removeCharacterInString(char *str, int LenOfString, const char character){
-    int numOfCharactersRemoved = 0, len=0;
-    char newString[LenOfString];
+int removeCharacterInString(char *str, const char character) {
+    int numOfCharactersRemoved = 0;
 
-    for (char *start=str; *start != '\0'; start++) {
-        if (*start== character){
+    while(*str != '\0'){
+        if(*str == character){
+            *str = *(str+1);
             numOfCharactersRemoved++;
+            str++;
             continue;
         }
-        newString[len] = *start;
-        len++;
-    }
-    newString[len+1] = '\0';
-    printf("Length of new string is %d", (int)strlen(newString));
 
-    //copy the newstring back to the old string
-    for(char *s=newString; *s != '\0'; s++){
-        *str = *s;
     }
+
     *str = '\0';
-
-    //*str = dst-(LenOfString-numOfCharactersRemoved);
-
-
     return numOfCharactersRemoved;
-
 }
 
-int substring(char *source, int start, int numOfCharacters, char *target){
-    int len=0, j;
+int substring(char *source, int start, int numOfCharacters, char *target) {
+    int len=0;
     //get the length of the string
     for(len=0; source[len]!='\0'; len++);
 
     // check the start
-    if(start > len){
+    if(start > len) {
         return 1;
     }
-    if((start+numOfCharacters)> len||(numOfCharacters == -1)){
+
+    if(start < 0) {
+        start += len;
+    }
+
+    if((start+numOfCharacters)> len||(numOfCharacters == -1)) {
         numOfCharacters = len - start;
     }
 
-    for(j=start; j<(start+numOfCharacters); j++ ){
-        target[j] = source[j];
+    for(int j=start; j<(start+numOfCharacters); j++) {
+        *target = source[j];
+        target++;
     }
 
-    target[j] = '\0';
+    *target = '\0';
     return 0;
 }
 
 
-int strCopy(char *source, char *destination){
+int strCopy(char *source, char *destination) {
 
     // exit if invalid string is sent
-    if ((source==NULL) || (sizeof(source[0]) != sizeof(char))){
+    if ((source==NULL) || (sizeof(source[0]) != sizeof(char))) {
         return 1;
     }
-//    while(*(source++) != '\0'){
-//        *source = *destination;
-//        destination++;
-//    }
+
     int i=0;
-    for (i=0; source[i]!='\0'; i++){
+    for (i=0; source[i]!='\0'; i++) {
         destination[i] = source[i];
     }
     destination[i] = '\0';
     return 0;
 }
 
+int strConcat(char *str1, char *str2) {
+
+    while(*str1!= '\0') str1++;
+
+    while(*str2 != '\0'){
+        *str1 = *str2;
+        str2++;
+        str1++;
+    };
+   *str1 = '\0';
+
+    return 0;
+}

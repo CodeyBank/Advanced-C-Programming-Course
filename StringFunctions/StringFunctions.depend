@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1691051912 source:c:\users\stanley.ezeh\documents\advanced c programming\stringfunctions\main.c
+1691058331 source:c:\users\stanley.ezeh\documents\advanced c programming\stringfunctions\main.c
 	<stdio.h>
 	<strings.h>
 	"StringFunctions.h"
 
-1691052187 c:\users\stanley.ezeh\documents\advanced c programming\stringfunctions\stringfunctions.h
+1691057610 c:\users\stanley.ezeh\documents\advanced c programming\stringfunctions\stringfunctions.h
 
