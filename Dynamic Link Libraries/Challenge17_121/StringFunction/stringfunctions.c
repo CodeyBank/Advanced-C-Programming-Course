@@ -17,9 +17,6 @@
   */
 
 #include <stdio.h>
-#include <strings.h>
-#include "StringFunctions.h"
-
 
 int strcount(const char *str) {
     int count=0;
@@ -43,15 +40,15 @@ int get_frequency(const char* restrict str, const char character, int LenOfStrin
 
 int removeCharacterInString(char *str, const char character) {
     int numOfCharactersRemoved = 0;
-    int i=1, j=0;
-    for (i =0; str[i]!='\0'; i++){
-        for(j=i; str[j]!='\0'; j++){
-            if(str[j] == character){
-               str[j] = str[j+1];
-               break;
-            }
-        }
-    }
+    // int i=1, j=0;
+    // for (i =0; str[i]!='\0'; i++){
+    //     for(j=i; str[j]!='\0'; j++){
+    //         if(str[j] == character){
+    //            str[j] = str[j+1];
+    //            break;
+    //         }
+    //     }
+    // }
 //    while(*str != '\0'){
 //        if(*str == character){
 //            *str = *(str+1);
