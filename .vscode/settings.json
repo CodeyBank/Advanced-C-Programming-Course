@@ -1,0 +1,4 @@
+{
+    "doxdocgen.generic.useGitUserEmail": true,
+    "doxdocgen.generic.useGitUserName": true
+}
