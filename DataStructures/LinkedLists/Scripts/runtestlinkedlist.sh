@@ -3,10 +3,10 @@
 # A bash script to compile and run a C program with gcc
 
 # Define the source file and the executable file names
-SRC="../LinkedLists/testLinkedList.c"
-OBJ="../LinkedLists/Debug/obj/testLinkedList.o"
-EXE="../LinkedLists/Debug/bin/testLinkedList.exe"
-DLLPATH="../LinkedLists/Debug/bin"
+SRC="./DataStructures/LinkedLists/src/testLinkedList.c"
+OBJ="./DataStructures/LinkedLists/Debug/obj/testLinkedList.o"
+EXE="./DataStructures/LinkedLists/Debug/bin/testLinkedList.exe"
+DLLPATH="./DataStructures/LinkedLists/Debug/bin"
 DLLNAME="lib_LinkedLists"
 
 # Compile program with Included DLL

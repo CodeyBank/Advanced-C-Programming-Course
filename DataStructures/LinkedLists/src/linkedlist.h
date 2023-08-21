@@ -120,3 +120,13 @@ int concat(pListNode pHeadFirstList, pListNode pHeadSecondList);
  * @return char character stored in the list structure at given index
  */
 char at(pListNode pHead, int index);
+
+/**
+ * @brief Update the value of a node in a list structure
+ * 
+ * @param first Pointer to the head of the node
+ * @param oldvalue previous value to in the list
+ * @param newvalue Value to replace the old value
+ * @return int 0-success, 1- failure
+ */
+int updateNode(pListNode *first, char oldvalue, char newvalue);

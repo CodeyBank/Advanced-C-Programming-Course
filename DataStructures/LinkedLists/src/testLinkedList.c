@@ -30,6 +30,7 @@ void displayOptions(void){
     printf("\n10.What character is at position?");
     printf("\n11.Concatenate two lists");
     printf("\n12.Exit\n");
+    printf("\n0.Show menu again");
     printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 }
 

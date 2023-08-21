@@ -165,17 +165,13 @@ void displayList(pListNode pCurrentItem){
         return;
     }
     else{
-        puts("The list is:\n");
-
         /* Iterate until end of the list*/
         while(pCurrentItem != NULL){
-            printf("%c :-> ", pCurrentItem->value);
+            printf("| %c ", pCurrentItem->value);
             pCurrentItem = pCurrentItem->pNext;
         }
     }
-
-    fputs("EOL \n\n",stdout);
-
+    fputs("|\n",stdout);
 }
 
 int isEmpty(pListNode first){
@@ -194,7 +190,7 @@ pListNode find(pListNode first, char searchValue){
     if(pCurrentNode->value == searchValue){
         return pCurrentNode;
     }else{
-        while(pCurrentNode->pNext != NULL && pCurrentNode->value !=searchValue){
+        while(pCurrentNode != NULL && pCurrentNode->value !=searchValue){
             pCurrentNode = pCurrentNode->pNext;
         }
         /* Check to confirm that we found the value we searched for*/
@@ -270,52 +266,28 @@ char at(pListNode pHead, int index){
     return pPreviousNode->value;
 }
 
+int updateNode(pListNode *first, char oldvalue, char newvalue){
+    // test the find operation
+    pListNode temp = find(*first, oldvalue);
+    if (temp ==NULL){
+        return 1;
+    }
+    temp->value = newvalue;
+    return 0;
+}
+
 // int main(void){
-//     pListNode testList =NULL;
+//     pListNode test = NULL;
+//     insertAtBegining(&test, 'A');
+//     insertAtBegining(&test, 'b');
+//     insertAtBegining(&test, 'c');
+//     insertAtBegining(&test, 'M');
+//     insertAtBegining(&test, 'n');
+//     insertAtBegining(&test, 'P');
 
-//     /* InsetAtBegining */
-//     puts("--> insert to the begining\n");
-//     insertAtBegining(&testList, 'D');
-//     insertAtBegining(&testList, 'B');
-//     insertAtBegining(&testList, 'A');
-//     displayList(testList);
+//     (void)updateNode(&test, 'n', 'w');
+//     displayList(test);
 
-//     puts(" --> SDisplay value at index\n");
-//     int index=1;
-//     printf("element at index %d is %c\n", index, at(testList, index));
-
-//     puts("--> insert at End\n");
-//     insertAtEnd(&testList, 'Z');
-
-//     puts("--> Insert alphabetically\n");
-//     insert(&testList, 'C');
-
-//     puts("Display size of list\n");
-//     printf("the size of the list is %d\n",size(testList));
-//     displayList(testList);
-
-//     puts("Delete at the begining \n");
-//     deleteAtBegining(&testList);
-//     displayList(testList);
-
-//     puts("Delete specific letter \n");
-//     delete(&testList, 'D');
-//     displayList(testList);
-
-//     puts("Check if list is empty \n");
-//     printf("List %s empty\n", isEmpty(testList)? "is":"is not");
-
-//     index = findItem(testList, 'Z');
-//     printf("The Index of D is %d\n", index);
-
-//     pListNode secondList=NULL;
-//     insertAtBegining(&secondList, 'G');
-//     insertAtBegining(&secondList, 'H');
-//     insertAtBegining(&secondList, 'I');
-
-//     printf("Concatenate \n");
-//     concat(testList, secondList);
-//     displayList(testList);
-    
 //     return 0;
+
 // }
