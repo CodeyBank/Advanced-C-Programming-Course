@@ -19,7 +19,7 @@ int pop(stack_t *top){
     stack_t tmp;
     if(*top != NULL){
         tmp = *top;
-        *top = tmp->link;
+        *top = (*top)->link;
         tmp->link = NULL;
         free(tmp);
     }
@@ -33,6 +33,7 @@ int pop(stack_t *top){
 
 int display(stack_t top){
     if(top==NULL){
+        puts("Stack cannot be null!\n");
         return 1;
     }
     stack_t tmp = top;

@@ -1,8 +1,14 @@
+/**
+ * @brief 
+ * 
+ */
 
+#pragma once
 typedef struct Node{
     int data;
     struct Node* link;
 } node_t;
+
 
 typedef node_t * stack_t;
 
