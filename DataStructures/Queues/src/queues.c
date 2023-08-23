@@ -117,6 +117,7 @@ int main(void)
     printQueue(queue);
     node_t peeked = peek(queue);
     printf("Peeked node has the value: %d\n", peeked->key);
+    printQueue(queue);
     for(int i=1; i<16;i++) dequeue(&queue);
     printQueue(queue);
     cleanUpQueue(queue);
