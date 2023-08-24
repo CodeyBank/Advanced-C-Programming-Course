@@ -102,6 +102,6 @@ int main(void){
 
     printf("\n\nInOrder Traversal is:\n");
     TraverseInOrder(root);
-
+    printf("Hello world");
     return 0;
 }
