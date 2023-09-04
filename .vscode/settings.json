@@ -3,6 +3,7 @@
     "doxdocgen.generic.useGitUserName": true,
     "cmake.configureOnOpen": false,
     "files.associations": {
-        "unistd.h": "c"
+        "unistd.h": "c",
+        "sockserver.C": "cpp"
     }
 }
